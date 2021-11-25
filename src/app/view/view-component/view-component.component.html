@@ -1,0 +1,26 @@
+<div>
+  <h2>Learning http service requests</h2>
+  User name (hint try koushikkothagal):
+  <input type="text" [(ngModel)]="userName" [value]="defaultValue" />
+  <button (click)="search()">Search</button>
+  <div *ngIf="gitHubResponse">
+    <table>
+      <tr>
+        <td>Login name:</td>
+        <td>{{ gitHubResponse.login }}</td>
+      </tr>
+      <tr>
+        <td>Number of repos:</td>
+        <td>{{ gitHubResponse.public_repos }}</td>
+      </tr>
+      <tr>
+        <td>Number of gists:</td>
+        <td>{{ gitHubResponse.public_gists }}</td>
+      </tr>
+      <tr>
+        <td>Number of followers:</td>
+        <td>{{ gitHubResponse.followers }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
