@@ -9,13 +9,21 @@ import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { TestService } from './test.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { SettingsComponent } from './settings/settings.component';
+
 
 @NgModule({
   imports: [
     BrowserModule, 
     FormsModule, 
     ViewModule, 
-    HttpClientModule],
+    HttpClientModule,
+    // AppRoutingModule,
+    // HomeComponent,
+    // SettingsComponent
+  ],
   declarations: [
     AppComponent,
     HelloWorldComponent,
