@@ -18,8 +18,8 @@ import { SettingsComponent } from '../settings/settings.component';
 // ];
 
 const routes: Routes = [
-  { path: 'homeComponent', component: HomeComponent },
-  { path: 'settingsComponent', 
+  { path: 'home', component: HomeComponent },
+  { path: 'settings', 
     component: SettingsComponent,
     children: [
       {
