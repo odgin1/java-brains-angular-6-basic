@@ -21,6 +21,11 @@ export class AppComponent {
     testService.printToConsole('hello');
   }
 
+  routes = [
+    {linkName: "Home", url: "home"},
+    {linkName: "Settings", url: "settings"},
+  ]
+  
   ngOnInit(){
     let obs = this.http.get('https://api.github.com/users/koushikkothagal')
     obs.subscribe(response => console.log(response))
