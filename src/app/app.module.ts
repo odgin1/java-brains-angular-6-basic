@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import { APP_BASE_HREF } from '@angular/common';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ChildBComponent } from './child-b/child-b.component';
+import { ChildAComponent } from './child-a/child-a.component';
 
 
 @NgModule({
@@ -20,17 +24,20 @@ import { SettingsComponent } from './settings/settings.component';
     FormsModule, 
     ViewModule, 
     HttpClientModule,
-    // AppRoutingModule,
-    // HomeComponent,
-    // SettingsComponent
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
     HelloWorldComponent,
     DateComponent,
     AddressCardComponent,
+    HomeComponent,
+    SettingsComponent,
+    PageNotFoundComponent,
+    ChildBComponent,
+    ChildAComponent
   ],
-  providers: [TestService],
+  providers: [TestService,{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
